@@ -1,0 +1,38 @@
+.menu {
+    background: #343434;
+    color: white;
+    height: 46px;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+.menu-logo {
+    display: flex;
+
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    margin-right: 25px;
+    height: 46px;
+}
+.icon {
+    
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 26px;
+    width: 26px;
+
+}
+.logo {
+    font-size: 19px;
+    width: 151px;
+    
+
+}
+.menu-dropdown {
+    display: flex;
+    align-items: center;
+}

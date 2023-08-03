@@ -1,0 +1,81 @@
+.card-wrapper {
+    margin-bottom: 30px;
+    position: relative;
+    
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 172px;
+    margin-right: 30px;
+}
+.poster {
+    background-size: cover;
+    width: 100%;
+    max-height: 243px;
+    border: 1px solid #b5b3b3;
+}
+.title {
+    font-size: 13px;
+    color: #176093;
+    font-weight: 700;
+    line-height: 1.65;
+}
+.rating {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.65;
+}
+.more-info {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 320px;
+    height: 300px;
+    border: 1px solid #176093;
+    padding: 8px;
+    left: 192px;
+    top: 1px;
+    z-index: 1;
+}
+
+.more-info .title-hover {
+    font-size: 16px;
+    color: #176093;
+    font-weight: 700;
+    line-height: 1.65;
+    margin-bottom: 10px;
+}
+.description {
+    margin-bottom: 10px;
+}
+.movie-tags-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.more-info .movie-tags {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #333;
+    font-weight: 500;
+}
+.tag-name {
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: #77c3fa;
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 4px;
+    margin: 5px;
+}
+.card-wrapper:hover .more-info {
+    display: flex;
+    flex-direction: column;
+    
+}
+.card-wrapper:hover .title {
+    color: red;
+}
