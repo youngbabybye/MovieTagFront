@@ -45,38 +45,60 @@ header.head .notice {
     display: flex;
     flex-wrap: wrap;
 
-    height: 535px;
+    height: 86px;
     padding: 5px;
     margin-bottom: 55px;
 
-    border: 2px solid #f9f9fd;
+    border: 2px solid rgb(97, 248, 97);
+    border-radius: 12px;
 
     overflow-y: scroll;
 }
+.tag-in-box .tag-name {
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: rgb(97, 248, 97);
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 4px;
+    margin: 5px;
+}
 .tag-in-box::-webkit-scrollbar {
     width: 10px;
-    
 }
 .tag-in-box::-webkit-scrollbar-track {
     -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
     background-color: #f9f9fd;
-    border-radius: 10px;
+    border-radius: 12px;
   }
   
 .tag-in-box::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 12px;
     background: linear-gradient(180deg, #176093,#176093);
+    
   }
 .tag-out-box {
     display: flex;
     flex-wrap: wrap;
 
-    height: 535px;
+    height: 86px;
     padding: 5px;
+    margin-bottom: 55px;
 
-    border: 2px solid #f9f9fd;
-
+    border: 2px solid rgb(255, 148, 148);
+    border-radius: 12px;
     overflow-y: scroll;
+}
+.tag-out-box .tag-name {
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: rgb(255, 148, 148);
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 4px;
+    margin: 5px;
 }
 .tag-out-box::-webkit-scrollbar {
     width: 10px;
@@ -92,3 +114,45 @@ header.head .notice {
     border-radius: 10px;
     background: linear-gradient(180deg, #176093,#176093);
   }
+.search-tags {
+    position: relative;
+}
+.search-input {
+    border: 2px #333 solid;
+    border-radius: 12px;
+    padding: 5px 10px;
+    width: 100%;
+
+}
+.search-input::placeholder {
+    text-align: center;
+}
+.search-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0.875rem;
+    width: 1.7rem;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .search-btn:hover {
+    transform: scale(0.92);
+  }
+.reset-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 0.875rem;
+    width: 1.7rem;
+    cursor: pointer;
+    transition: 1s;
+}
+.reset-btn:hover {
+    transform: scale(0.92);
+}

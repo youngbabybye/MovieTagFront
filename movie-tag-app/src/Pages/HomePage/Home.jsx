@@ -2,7 +2,8 @@ import "./home.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { MovieCard } from "../../components/MoviesCard/Moviecard";
-
+import search from "../../images/search.svg";
+import reset_search from "../../images/reset_value.svg";
 const Home = () => {
     function compare(a, b) {
         if (a.rating > b.rating) return -1;
@@ -11,6 +12,7 @@ const Home = () => {
     }
     const [movies, setMovies] = useState([]);
     const [tags, setTags] = useState([]);
+    const [searchValue, setSearchValue] = useState("");
 
     useEffect(() => {
         fetch("http://37.140.241.219/api/Movie")
@@ -55,7 +57,7 @@ const Home = () => {
                             tags.map((tag) => {
                                 return (
                                     <p key={tag.id} className="tag-name">
-                                        {tag.nameEng}
+                                        {tag.nameRu}
                                     </p>
                                 );
                             })}
@@ -66,11 +68,29 @@ const Home = () => {
                             tags.map((tag) => {
                                 return (
                                     <p key={tag.id} className="tag-name">
-                                        {tag.nameEng}
+                                        {tag.nameRu}
                                     </p>
                                 );
                             })}
                     </div>
+                    <form className="search-tags">
+                        <input
+                            type="text"
+                            placeholder="Введите название тега"
+                            className="search-input"
+                            value={searchValue}
+                            onChange={(e) => setSearchValue(e.target.value)}
+                        />
+                        <button type="submit" className="search-btn">
+                            <img src={search} alt="Кнопка поиска тегов" />
+                        </button>
+                        <button className="reset-btn">
+                            <img
+                                src={reset_search}
+                                alt="Кнопка стереть поле ввода"
+                            />
+                        </button>
+                    </form>
                 </aside>
             </div>
         </section>
